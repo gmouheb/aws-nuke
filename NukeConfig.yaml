@@ -1,0 +1,74 @@
+regions:
+  - eu-central-1
+  - eu-west-1
+  - us-east-1
+  - eu-west-3
+  - eu-north-1
+
+blocklist-terms:
+  - "stg"
+  - "prd"
+
+blocklist:
+  # The blocklist is a list of account IDs that aws-nuke is not allowed to run against.
+  # Its purpose is to prevent accidental execution on the wrong account.
+  # aws-nuke operates against the AWS account your credentials authenticate to,
+  # together with the account-specific configuration under `accounts`.
+  # For example, if your active credentials resolve to account "439763497279",
+  # aws-nuke will act in that account’s context, subject to the config.
+  # Other accounts are not directly targeted unless you intentionally authenticate
+  # to them and configure them.
+  # The blocklist adds an extra safety layer by explicitly forbidding specified
+  # account IDs from being targeted.
+  - "426296748241"
+
+
+resource-types:
+  excludes:
+    - IAMAccountSettingPasswordPolicy
+    - IAMGroup
+    - IAMGroupPolicy
+    - IAMGroupPolicyAttachment
+    - IAMInstanceProfile
+    - IAMInstanceProfileRole
+    - IAMLoginProfile
+    - IAMOpenIDConnectProvider
+    - IAMPolicy
+    - IAMRole
+    - IAMRolePolicy
+    - IAMRolePolicyAttachment
+    - IAMRolesAnywhereCRL
+    - IAMRolesAnywhereProfile
+    - IAMRolesAnywhereTrustAnchor
+    - IAMSAMLProvider
+    - IAMServerCertificate
+    - IAMServiceSpecificCredential
+    - IAMSigningCertificate
+    - IAMUser
+    - IAMUserAccessKey
+    - IAMUserGroupAttachment
+    - IAMUserHTTPSGitCredential
+    - IAMUserMFADevice
+    - IAMUserPolicy
+    - IAMUserPolicyAttachment
+    - IAMUserSSHPublicKey
+    - IAMVirtualMFADevice
+    - LightsailDisk
+    - LightsailDomain
+    - LightsailInstance
+    - LightsailKeyPair
+    - LightsailLoadBalancer
+    - LightsailStaticIP
+    - S3AccessGrantsGrant
+    - S3AccessGrantsInstance
+    - S3AccessGrantsLocation
+    - S3AccessPoint
+    - S3Bucket
+    - S3MultipartUpload
+    - S3Object
+
+accounts:
+  "025389629558": {}
+  
+  
+  
