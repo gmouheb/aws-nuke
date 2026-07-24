@@ -106,7 +106,7 @@ Expected output:
 
 Download the binary from the internal link:
 
-`**[https://aws-nuke.ekristen.dev/installation/](https://github.com/ekristen/aws-nuke/releases/download/v3.66.0/aws-nuke-v3.66.0-darwin-amd64.tar.gz)**`
+`https://github.com/ekristen/aws-nuke/releases/download/v3.66.0/aws-nuke-v3.66.0-darwin-amd64.tar.gz`
 
 Install:
 
